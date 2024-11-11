@@ -1,0 +1,19 @@
+{
+  "name": "@cstroliadavis/is-object",
+  "version": "0.0.0",
+  "exports": "./mod.ts",
+  "lock": false,
+  "fmt": {
+    "exclude": ["docs", "coverage"]
+  },
+  "lint": {
+    "exclude": ["docs", "coverage"]
+  },
+  "tasks": {
+    "prep": "deno run check && deno lint && deno fmt && deno run gen-docs && deno run test:coverage",
+    "check": "deno check mod.ts",
+    "gen-docs": "deno doc --html ./mod.ts",
+    "test": "deno test --doc mod.ts",
+    "test:coverage": "deno test --doc --clean --coverage mod.ts && deno coverage --html"
+  }
+}
