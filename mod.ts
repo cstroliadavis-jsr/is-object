@@ -34,8 +34,15 @@
  *
  * ### JavaScript or TypeScript
  *
- * ```ts
+ * ```ts ignore
+ * const someValue = null;
+ *
+ * if(isObject(someValue))
+ *   console.log("It's an object");
+ * else
+ *   console.log("This is no object");
  * ```
+ * Writes `This is no object` to the console
  *
  * ## License
  *
@@ -49,28 +56,24 @@
  *
  * https://github.com/cstroliadavis-jsr/is-object/issues
  */
-
 /**
  * Creates a frozen, deep-copy of an object
  *
  * @example
- * Examples:
+ * Test examples:
  * @code
  * ```ts
- * import { describe, it } from "jsr:@std/testing/bdd";
  * import { expect } from "jsr:@std/expect";
  *
- * const isObjectTests = describe("isObject");
- *
- * it({
- *   name: "returns true if the value is an object",
- *   parent: isObjectTests,
- *   fn() {
- *     expect(isObject({}).toBe(true);
- *   },
- * });
+ * expect(isObject({})).toBe(true);
+ * expect(isObject(null)).toBe(false);
+ * expect(isObject("not an object")).toBe(false);
+ * expect(isObject([])).toBe(true);
+ * expect(isObject(new Date())).toBe(true);
+ * expect(isObject({any: 1})).toBe(true);
+ * expect(isObject(undefined)).toBe(false);
  * ```
  */
-export const isObject = (input: any) => input;
+export const isObject = (input: unknown): boolean => !!(input && typeof input === 'object');
 
 export default isObject;
