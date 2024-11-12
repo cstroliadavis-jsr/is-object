@@ -1,6 +1,6 @@
 {
   "name": "@cstroliadavis/is-object",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "exports": "./mod.ts",
   "lock": false,
   "fmt": {

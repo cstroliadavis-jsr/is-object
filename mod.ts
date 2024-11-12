@@ -4,7 +4,7 @@
  * -------------------------------------------------------------------------------------------------
  *
  * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
- * ![version](https://img.shields.io/badge/version-0.0.0-blue)
+ * ![version](https://img.shields.io/badge/version-1.0.0-blue)
  *
  * ## Description
  *
@@ -34,7 +34,7 @@
  * ### JavaScript or TypeScript
  *
  * ```ts ignore
- * import { isObject } from 'jsr:@cstroliadavis/is-object@0.0.0';
+ * import { isObject } from 'jsr:@cstroliadavis/is-object@1.0.0';
  *
  * const someValue = null;
  *
@@ -63,11 +63,11 @@
  * @author Chris Strolia-Davis<web.dev@strolia-davis.us>
  * @copyright 2024
  * @licence [MIT]{@link ./LICENSE}
- * @version 0.0.0
+ * @version 1.0.0
  */
 
 /**
- * Creates a frozen, deep-copy of an object
+ * Checks to see if a value is an object
  *
  * @example
  * Test examples:
@@ -82,10 +82,8 @@
  * expect(isObject({any: 1})).toBe(true);
  * expect(isObject(undefined)).toBe(false);
  * ```
- * @param input The value to check
- * @returns true or false depending on if the value is a non-null object
+ * @param {unknown} input The value to check
+ * @returns {boolean} true or false depending on if the value is a non-null object
  */
 export const isObject = (input: unknown): boolean =>
   !!(input && typeof input === "object");
-
-export default isObject;
