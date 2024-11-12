@@ -3,7 +3,7 @@
 ---
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-![version](https://img.shields.io/badge/version-1.0.0-blue)
+![version](https://img.shields.io/badge/version-1.0.1-blue)
 
 ## Description
 
@@ -40,7 +40,7 @@ npx jsr add jsr/is-object
 ### JavaScript or TypeScript
 
 ```ts ignore
-import { isObject } from "jsr:@cstroliadavis/is-object@1.0.0";
+import { isObject } from "jsr:@cstroliadavis/is-object@1.0.1";
 
 const someValue = null;
 

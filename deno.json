@@ -1,6 +1,6 @@
 {
   "name": "@cstroliadavis/is-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": "./mod.ts",
   "lock": false,
   "fmt": {
@@ -15,5 +15,9 @@
     "gen-docs": "deno doc --html ./mod.ts",
     "test": "deno test --doc mod.ts",
     "test:coverage": "deno test --doc --clean --coverage mod.ts && deno coverage --html"
+  },
+  "publish": {
+    "exclude": ["docs/", "coverage/", ".idea/", "./github", ".DS_Store"],
+    "include": ["mod.ts","LICENSE", "README.md"]
   }
 }
